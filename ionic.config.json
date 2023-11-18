@@ -1,0 +1,7 @@
+{
+  "name": "trabalhoppm",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
