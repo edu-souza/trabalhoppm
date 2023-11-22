@@ -7,22 +7,21 @@ import { Component } from '@angular/core';
 })
 export class Atividade4Page {
   novaTarefa: string = '';
-  tarefas: { nome: string; concluida: boolean }[] = [];
+  tarefas: { nome: string; concluida: boolean; estilo: string }[] = [];
 
   adicionarTarefa() {
     if (this.novaTarefa.trim() !== '') {
-      this.tarefas.push({ nome: this.novaTarefa, concluida: false });
+      this.tarefas.push({ nome: this.novaTarefa, concluida: false, estilo: 'tarefa-pendente' });
       this.novaTarefa = '';
     }
   }
 
-  removerTarefa(tarefa: { nome: string; concluida: boolean }) {
+  removerTarefa(tarefa: { nome: string; concluida: boolean; estilo: string }) {
     this.tarefas = this.tarefas.filter((t) => t !== tarefa);
   }
 
-  //Nao consegui fazer funcionar o line-through
-  concluirTarefa(tarefa: { nome: string; concluida: boolean }) {
+  concluirTarefa(tarefa: { nome: string; concluida: boolean; estilo: string }) {
     tarefa.concluida = !tarefa.concluida;
+    tarefa.estilo = tarefa.concluida ? 'tarefa-concluida' : 'tarefa-pendente';
   }
-
 }
