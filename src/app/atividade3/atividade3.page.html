@@ -1,0 +1,95 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Calculadora de IMC</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label>Altura (cm)</ion-label>
+    <ion-input type="number" [(ngModel)]="altura"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Peso (kg)</ion-label>
+    <ion-input type="number" [(ngModel)]="peso"></ion-input>
+  </ion-item>
+
+  <ion-button color="primary" (click)="calcularIMC()">Calcular</ion-button>
+
+  <ion-list>
+    <ion-item>
+      <ion-label>IMC: {{ imc }}</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item>
+      <ion-label>Classificação:</ion-label>
+    </ion-item>
+    <ion-row>
+      <ion-col>
+        <ion-text>Magreza grave</ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text>16</ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-text>Magreza moderada</ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text>16 a 17</ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-text>Magreza leve</ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text>17 a 18,5</ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-text>Saudável</ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text>18,5 a 25</ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-text>Sobrepeso</ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text>25 a 30</ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-text>Obesidade Grau I</ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text>30 a 35</ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-text>Obesidade Grau II</ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text>35 a 40</ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-text>Obesidade Grau III (mórbida)</ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text>>= 40</ion-text>
+      </ion-col>
+    </ion-row>
+  </ion-list>
+</ion-content>

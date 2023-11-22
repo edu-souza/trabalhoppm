@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Calculadora de Idade
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-item>
+    <ion-label position="stacked">Ano de Nascimento</ion-label>
+    <ion-input type="number" [(ngModel)]="anoNascimento"></ion-input>
+  </ion-item>
+
+  <ion-button expand="full" (click)="calcularIdade()">Calcular Idade</ion-button>
+
+  <ion-item *ngIf="idade !== null">
+    <ion-label>Idade:</ion-label>
+    <ion-text>{{ idade }}</ion-text>
+  </ion-item>
+
+  <ion-item *ngIf="classificacao !== null">
+    <ion-label>Classificação:</ion-label>
+    <ion-text>{{ classificacao }}</ion-text>
+  </ion-item>
+
+  <ion-button expand="full" (click)="limparCampos()">Limpar</ion-button>
+</ion-content>
